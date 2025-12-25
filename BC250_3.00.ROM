@@ -9,14 +9,14 @@
 <meta charset="utf-8">
 <meta content="IE=edge" http-equiv="X-UA-Compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport">
-<title>BC250_3.00_CHIPSETMENU.ROM · main · Segfault / BC-250 BIOS · GitLab</title>
-<script nonce="pJJ7tTn26G8TOKtQcuxwmA==">
+<title>BC250_3.00.ROM · main · Segfault / BC-250 BIOS · GitLab</title>
+<script nonce="zwI81Jc8Qez39e6s5pATsQ==">
 //<![CDATA[
 window.gon={};gon.api_version="v4";gon.default_avatar_url="https://gitlab.com/assets/no_avatar-849f9c04a3a0d0cea2424ae97b27447dc64a7dbfae83c036c45b403392f0e8ba.png";gon.max_file_size=100;gon.asset_host=null;gon.webpack_public_path="/assets/webpack/";gon.relative_url_root="";gon.user_color_mode="gl-system";gon.user_color_scheme="white";gon.markdown_surround_selection=null;gon.markdown_automatic_lists=null;gon.markdown_maintain_indentation=null;gon.math_rendering_limits_enabled=true;gon.allow_immediate_namespaces_deletion=true;gon.iframe_rendering_enabled=true;gon.iframe_rendering_allowlist=["embed.figma.com","www.figma.com","www.youtube.com"];gon.sentry_dsn="https://f5573e26de8f4293b285e556c35dfd6e@new-sentry.gitlab.net/4";gon.sentry_environment="gprd";gon.sentry_clientside_traces_sample_rate=0.05;gon.recaptcha_api_server_url="https://www.recaptcha.net/recaptcha/api.js";gon.recaptcha_sitekey="6LfAERQTAAAAAL4GYSiAMGLbcLyUIBSfPrDNJgeC";gon.gitlab_url="https://gitlab.com";gon.promo_url="https://about.gitlab.com";gon.forum_url="https://forum.gitlab.com";gon.docs_url="https://docs.gitlab.com";gon.revision="be219014047";gon.feature_category="source_code_management";gon.gitlab_logo="/assets/gitlab_logo-2957169c8ef64c58616a1ac3f4fc626e8a35ce4eb3ed31bb0d873712f2a041a0.png";gon.secure=true;gon.sprite_icons="/assets/icons-dafe78f1f5f3f39844d40e6211b4b6b2b89533b96324c26e6ca12cfd6cf1b0ca.svg";gon.sprite_file_icons="/assets/file_icons/file_icons-90de312d3dbe794a19dee8aee171f184ff69ca9c9cf9fe37e8b254e84c3a1543.svg";gon.illustrations_path="/images/illustrations.svg";gon.emoji_sprites_css_path="/assets/emoji_sprites-bd26211944b9d072037ec97cb138f1a52cd03ef185cd38b8d1fcc963245199a1.css";gon.emoji_backend_version=4;gon.gridstack_css_path="/assets/lazy_bundles/gridstack-f42069e5c7b1542688660592b48f2cbd86e26b77030efd195d124dbd8fe64434.css";gon.test_env=false;gon.disable_animations=null;gon.suggested_label_colors={"#cc338b":"Magenta-pink","#dc143c":"Crimson","#c21e56":"Rose red","#cd5b45":"Dark coral","#ed9121":"Carrot orange","#eee600":"Titanium yellow","#009966":"Green-cyan","#8fbc8f":"Dark sea green","#6699cc":"Blue-gray","#e6e6fa":"Lavender","#9400d3":"Dark violet","#330066":"Deep violet","#36454f":"Charcoal grey","#808080":"Gray"};gon.first_day_of_week=0;gon.time_display_relative=true;gon.time_display_format=0;gon.ee=true;gon.jh=false;gon.dot_com=true;gon.uf_error_prefix="UF";gon.pat_prefix="glpat-";gon.keyboard_shortcuts_enabled=true;gon.broadcast_message_dismissal_path=null;gon.diagramsnet_url="https://embed.diagrams.net";gon.features={"uiForOrganizations":false,"organizationSwitching":false,"findAndReplace":false,"removeMonitorMetrics":true,"newProjectCreationForm":false,"workItemsClientSideBoards":false,"glqlWorkItems":true,"glqlAggregation":false,"glqlTypescript":false,"archiveGroup":true,"accessibleLoadingButton":false,"allowIframesInMarkdown":false,"projectStudioEnabled":true,"advancedContextResolver":true,"duoUiNext":false,"agenticChatGa":false,"dapUseFoundationalFlowsSetting":false,"inlineBlame":false,"repositoryFileTreeBrowser":false,"blobEditRefactor":false,"repositoryLockInformation":false,"convertToGlCiFlowRegistry":false};gon.roadmap_epics_limit=1000;gon.subscriptions_url="https://customers.gitlab.com";gon.subscriptions_legacy_sign_in_url="https://customers.gitlab.com/customers/sign_in?legacy=true";gon.billing_accounts_url="https://customers.gitlab.com/billing_accounts";gon.payment_form_url="https://customers.gitlab.com/payment_forms/cc_validation";gon.payment_validation_form_id="payment_method_validation";gon.licensed_features={"remoteDevelopment":true};
 //]]>
 </script>
 
-<script nonce="pJJ7tTn26G8TOKtQcuxwmA==">
+<script nonce="zwI81Jc8Qez39e6s5pATsQ==">
 //<![CDATA[
 const root = document.documentElement;
 if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -33,11 +33,11 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e)
 
 //]]>
 </script>
-<script nonce="pJJ7tTn26G8TOKtQcuxwmA==">
+<script nonce="zwI81Jc8Qez39e6s5pATsQ==">
 //<![CDATA[
 var gl = window.gl || {};
 gl.startup_calls = null;
-gl.startup_graphql_calls = [{"query":"query getBlobInfo(\n  $projectPath: ID!\n  $filePath: [String!]!\n  $ref: String!\n  $refType: RefType\n  $shouldFetchRawText: Boolean!\n) {\n  project(fullPath: $projectPath) {\n    __typename\n    id\n    repository {\n      __typename\n      empty\n      blobs(paths: $filePath, ref: $ref, refType: $refType) {\n        __typename\n        nodes {\n          __typename\n          id\n          webPath\n          name\n          size\n          rawSize\n          rawTextBlob @include(if: $shouldFetchRawText)\n          fileType\n          language\n          path\n          blamePath\n          editBlobPath\n          gitpodBlobUrl\n          ideEditPath\n          forkAndEditPath\n          ideForkAndEditPath\n          codeNavigationPath\n          projectBlobPathRoot\n          forkAndViewPath\n          environmentFormattedExternalUrl\n          environmentExternalUrlForRouteMap\n          canModifyBlob\n          canModifyBlobWithWebIde\n          canCurrentUserPushToBranch\n          archived\n          storedExternally\n          externalStorage\n          externalStorageUrl\n          rawPath\n          replacePath\n          pipelineEditorPath\n          simpleViewer {\n            fileType\n            tooLarge\n            type\n            renderError\n          }\n          richViewer {\n            fileType\n            tooLarge\n            type\n            renderError\n          }\n        }\n      }\n    }\n  }\n}\n","variables":{"projectPath":"TuxThePenguin0/bc250-bios","ref":"main","refType":null,"filePath":"BC250_3.00_CHIPSETMENU.ROM","shouldFetchRawText":false}}];
+gl.startup_graphql_calls = [{"query":"query getBlobInfo(\n  $projectPath: ID!\n  $filePath: [String!]!\n  $ref: String!\n  $refType: RefType\n  $shouldFetchRawText: Boolean!\n) {\n  project(fullPath: $projectPath) {\n    __typename\n    id\n    repository {\n      __typename\n      empty\n      blobs(paths: $filePath, ref: $ref, refType: $refType) {\n        __typename\n        nodes {\n          __typename\n          id\n          webPath\n          name\n          size\n          rawSize\n          rawTextBlob @include(if: $shouldFetchRawText)\n          fileType\n          language\n          path\n          blamePath\n          editBlobPath\n          gitpodBlobUrl\n          ideEditPath\n          forkAndEditPath\n          ideForkAndEditPath\n          codeNavigationPath\n          projectBlobPathRoot\n          forkAndViewPath\n          environmentFormattedExternalUrl\n          environmentExternalUrlForRouteMap\n          canModifyBlob\n          canModifyBlobWithWebIde\n          canCurrentUserPushToBranch\n          archived\n          storedExternally\n          externalStorage\n          externalStorageUrl\n          rawPath\n          replacePath\n          pipelineEditorPath\n          simpleViewer {\n            fileType\n            tooLarge\n            type\n            renderError\n          }\n          richViewer {\n            fileType\n            tooLarge\n            type\n            renderError\n          }\n        }\n      }\n    }\n  }\n}\n","variables":{"projectPath":"TuxThePenguin0/bc250-bios","ref":"main","refType":null,"filePath":"BC250_3.00.ROM","shouldFetchRawText":false}}];
 
 if (gl.startup_calls && window.fetch) {
   Object.keys(gl.startup_calls).forEach(apiCall => {
@@ -56,7 +56,7 @@ if (gl.startup_calls && window.fetch) {
   });
 }
 if (gl.startup_graphql_calls && window.fetch) {
-  const headers = {"X-CSRF-Token":"MS-fyZu_gHJC-DtpmyGENSuCC-vk7RT_SKIfWWfxYKPkbBqSUI_L8bRsQHkjaPuPLQXoEYjMoOP21K8ctXPdRg","x-gitlab-feature-category":"source_code_management"};
+  const headers = {"X-CSRF-Token":"cQOMkTewSZ-AOCLisKWpqO_jDYXRCEZwNYM8iv5cQq6kQAnK_IACHHasWfII7NYS6WTuf70p8myL9YzPLN7_Sw","x-gitlab-feature-category":"source_code_management"};
   const url = `https://gitlab.com/api/graphql`
 
   const opts = {
@@ -94,15 +94,15 @@ if (gl.startup_graphql_calls && window.fetch) {
 <link rel="stylesheet" href="/assets/highlight/themes/white-c47e38e4a3eafd97b389c0f8eec06dce295f311cdc1c9e55073ea9406b8fe5b0.css" media="(prefers-color-scheme: light)" />
 <link rel="stylesheet" href="/assets/highlight/themes/dark-8796b0549a7cd8fd6d2646619fa5840db4505d7031a76d5441a3cee1d12390d2.css" media="(prefers-color-scheme: dark)" />
 
-<script src="/assets/webpack/runtime.5a16903b.bundle.js" defer="defer" nonce="pJJ7tTn26G8TOKtQcuxwmA=="></script>
-<script src="/assets/webpack/main.767a3608.chunk.js" defer="defer" nonce="pJJ7tTn26G8TOKtQcuxwmA=="></script>
-<script src="/assets/webpack/tracker.85adcc5f.chunk.js" defer="defer" nonce="pJJ7tTn26G8TOKtQcuxwmA=="></script>
-<script src="/assets/webpack/analytics.1f5b93d6.chunk.js" defer="defer" nonce="pJJ7tTn26G8TOKtQcuxwmA=="></script>
-<script nonce="pJJ7tTn26G8TOKtQcuxwmA==">
+<script src="/assets/webpack/runtime.5a16903b.bundle.js" defer="defer" nonce="zwI81Jc8Qez39e6s5pATsQ=="></script>
+<script src="/assets/webpack/main.767a3608.chunk.js" defer="defer" nonce="zwI81Jc8Qez39e6s5pATsQ=="></script>
+<script src="/assets/webpack/tracker.85adcc5f.chunk.js" defer="defer" nonce="zwI81Jc8Qez39e6s5pATsQ=="></script>
+<script src="/assets/webpack/analytics.1f5b93d6.chunk.js" defer="defer" nonce="zwI81Jc8Qez39e6s5pATsQ=="></script>
+<script nonce="zwI81Jc8Qez39e6s5pATsQ==">
 //<![CDATA[
 window.snowplowOptions = {"namespace":"gl","hostname":"snowplowprd.trx.gitlab.net","cookieDomain":".gitlab.com","appId":"gitlab","formTracking":true,"linkClickTracking":true};
 gl = window.gl || {};
-gl.snowplowStandardContext = {"schema":"iglu:com.gitlab/gitlab_standard/jsonschema/1-1-7","data":{"environment":"production","source":"gitlab-rails","correlation_id":"9b3634357500076d-ATL","extra":{},"user_id":null,"global_user_id":null,"user_type":null,"is_gitlab_team_member":null,"namespace_id":12011221,"ultimate_parent_namespace_id":12011221,"project_id":62782166,"feature_enabled_by_namespace_ids":null,"realm":"saas","deployment_type":".com","context_generated_at":"2025-12-25T06:15:26.828Z"}};
+gl.snowplowStandardContext = {"schema":"iglu:com.gitlab/gitlab_standard/jsonschema/1-1-7","data":{"environment":"production","source":"gitlab-rails","correlation_id":"9b3634072425076d-ATL","extra":{},"user_id":null,"global_user_id":null,"user_type":null,"is_gitlab_team_member":null,"namespace_id":12011221,"ultimate_parent_namespace_id":12011221,"project_id":62782166,"feature_enabled_by_namespace_ids":null,"realm":"saas","deployment_type":".com","context_generated_at":"2025-12-25T06:15:19.384Z"}};
 gl.snowplowPseudonymizedPageUrl = "https://gitlab.com/namespace12011221/project62782166/-/blob/:repository_path";
 gl.maskedDefaultReferrerUrl = null;
 gl.ga4MeasurementId = 'G-ENFH3X7M5Y';
@@ -123,44 +123,44 @@ gl.onlySendDuoEvents = false;
 
 
 
-<script src="/assets/webpack/sentry.9f950cd9.chunk.js" defer="defer" nonce="pJJ7tTn26G8TOKtQcuxwmA=="></script>
+<script src="/assets/webpack/sentry.9f950cd9.chunk.js" defer="defer" nonce="zwI81Jc8Qez39e6s5pATsQ=="></script>
 
-<script src="/assets/webpack/commons-pages.search.show-super_sidebar.f40f6908.chunk.js" defer="defer" nonce="pJJ7tTn26G8TOKtQcuxwmA=="></script>
-<script src="/assets/webpack/super_sidebar.90b703f7.chunk.js" defer="defer" nonce="pJJ7tTn26G8TOKtQcuxwmA=="></script>
-<script src="/assets/webpack/commons-pages.groups-pages.groups.achievements-pages.groups.activity-pages.groups.analytics.ci_cd_an-060c8111.a1a31330.chunk.js" defer="defer" nonce="pJJ7tTn26G8TOKtQcuxwmA=="></script>
-<script src="/assets/webpack/commons-pages.projects-pages.projects.activity-pages.projects.alert_management.details-pages.project-1473cf4f.71594b67.chunk.js" defer="defer" nonce="pJJ7tTn26G8TOKtQcuxwmA=="></script>
-<script src="/assets/webpack/commons-pages.groups.epics.index-pages.groups.epics.new-pages.groups.epics.show-pages.groups.issues--a416039b.fbd8d9d9.chunk.js" defer="defer" nonce="pJJ7tTn26G8TOKtQcuxwmA=="></script>
-<script src="/assets/webpack/commons-pages.admin.application_settings.service_accounts-pages.admin.impersonation_tokens-pages.gro-920943c6.1f4c9a15.chunk.js" defer="defer" nonce="pJJ7tTn26G8TOKtQcuxwmA=="></script>
-<script src="/assets/webpack/dbe6a049.1fc40ea6.chunk.js" defer="defer" nonce="pJJ7tTn26G8TOKtQcuxwmA=="></script>
-<script src="/assets/webpack/61003c35.c2c0dabf.chunk.js" defer="defer" nonce="pJJ7tTn26G8TOKtQcuxwmA=="></script>
-<script src="/assets/webpack/467359d4.e570ec37.chunk.js" defer="defer" nonce="pJJ7tTn26G8TOKtQcuxwmA=="></script>
-<script src="/assets/webpack/commons-pages.projects.blob.edit-pages.projects.blob.new-pages.projects.blob.show-pages.projects.get-487ddc08.240d789d.chunk.js" defer="defer" nonce="pJJ7tTn26G8TOKtQcuxwmA=="></script>
-<script src="/assets/webpack/ea7ea8c3.58ef5d7f.chunk.js" defer="defer" nonce="pJJ7tTn26G8TOKtQcuxwmA=="></script>
-<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.show-pages.projects.snippets.show-pages.projects.tre-c684fcf6.dc6aa7de.chunk.js" defer="defer" nonce="pJJ7tTn26G8TOKtQcuxwmA=="></script>
-<script src="/assets/webpack/499d8988.82c18b02.chunk.js" defer="defer" nonce="pJJ7tTn26G8TOKtQcuxwmA=="></script>
-<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.get_started.show-pages.projects.show-pages.projects.tree.show.bf0ddc2d.chunk.js" defer="defer" nonce="pJJ7tTn26G8TOKtQcuxwmA=="></script>
-<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.commits.show-pages.projects.show-pages.projects.tree.show.82be471d.chunk.js" defer="defer" nonce="pJJ7tTn26G8TOKtQcuxwmA=="></script>
-<script src="/assets/webpack/commons-pages.projects.blame.show-pages.projects.blob.show-pages.projects.show-pages.projects.tree.show.88abfe46.chunk.js" defer="defer" nonce="pJJ7tTn26G8TOKtQcuxwmA=="></script>
-<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.show-pages.projects.tree.show.8b97c7a2.chunk.js" defer="defer" nonce="pJJ7tTn26G8TOKtQcuxwmA=="></script>
-<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.tree.show-treeList.df10319d.chunk.js" defer="defer" nonce="pJJ7tTn26G8TOKtQcuxwmA=="></script>
-<script src="/assets/webpack/pages.projects.blob.show.312db5b5.chunk.js" defer="defer" nonce="pJJ7tTn26G8TOKtQcuxwmA=="></script>
+<script src="/assets/webpack/commons-pages.search.show-super_sidebar.f40f6908.chunk.js" defer="defer" nonce="zwI81Jc8Qez39e6s5pATsQ=="></script>
+<script src="/assets/webpack/super_sidebar.90b703f7.chunk.js" defer="defer" nonce="zwI81Jc8Qez39e6s5pATsQ=="></script>
+<script src="/assets/webpack/commons-pages.groups-pages.groups.achievements-pages.groups.activity-pages.groups.analytics.ci_cd_an-060c8111.a1a31330.chunk.js" defer="defer" nonce="zwI81Jc8Qez39e6s5pATsQ=="></script>
+<script src="/assets/webpack/commons-pages.projects-pages.projects.activity-pages.projects.alert_management.details-pages.project-1473cf4f.71594b67.chunk.js" defer="defer" nonce="zwI81Jc8Qez39e6s5pATsQ=="></script>
+<script src="/assets/webpack/commons-pages.groups.epics.index-pages.groups.epics.new-pages.groups.epics.show-pages.groups.issues--a416039b.fbd8d9d9.chunk.js" defer="defer" nonce="zwI81Jc8Qez39e6s5pATsQ=="></script>
+<script src="/assets/webpack/commons-pages.admin.application_settings.service_accounts-pages.admin.impersonation_tokens-pages.gro-920943c6.1f4c9a15.chunk.js" defer="defer" nonce="zwI81Jc8Qez39e6s5pATsQ=="></script>
+<script src="/assets/webpack/dbe6a049.1fc40ea6.chunk.js" defer="defer" nonce="zwI81Jc8Qez39e6s5pATsQ=="></script>
+<script src="/assets/webpack/61003c35.c2c0dabf.chunk.js" defer="defer" nonce="zwI81Jc8Qez39e6s5pATsQ=="></script>
+<script src="/assets/webpack/467359d4.e570ec37.chunk.js" defer="defer" nonce="zwI81Jc8Qez39e6s5pATsQ=="></script>
+<script src="/assets/webpack/commons-pages.projects.blob.edit-pages.projects.blob.new-pages.projects.blob.show-pages.projects.get-487ddc08.240d789d.chunk.js" defer="defer" nonce="zwI81Jc8Qez39e6s5pATsQ=="></script>
+<script src="/assets/webpack/ea7ea8c3.58ef5d7f.chunk.js" defer="defer" nonce="zwI81Jc8Qez39e6s5pATsQ=="></script>
+<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.show-pages.projects.snippets.show-pages.projects.tre-c684fcf6.dc6aa7de.chunk.js" defer="defer" nonce="zwI81Jc8Qez39e6s5pATsQ=="></script>
+<script src="/assets/webpack/499d8988.82c18b02.chunk.js" defer="defer" nonce="zwI81Jc8Qez39e6s5pATsQ=="></script>
+<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.get_started.show-pages.projects.show-pages.projects.tree.show.bf0ddc2d.chunk.js" defer="defer" nonce="zwI81Jc8Qez39e6s5pATsQ=="></script>
+<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.commits.show-pages.projects.show-pages.projects.tree.show.82be471d.chunk.js" defer="defer" nonce="zwI81Jc8Qez39e6s5pATsQ=="></script>
+<script src="/assets/webpack/commons-pages.projects.blame.show-pages.projects.blob.show-pages.projects.show-pages.projects.tree.show.88abfe46.chunk.js" defer="defer" nonce="zwI81Jc8Qez39e6s5pATsQ=="></script>
+<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.show-pages.projects.tree.show.8b97c7a2.chunk.js" defer="defer" nonce="zwI81Jc8Qez39e6s5pATsQ=="></script>
+<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.tree.show-treeList.df10319d.chunk.js" defer="defer" nonce="zwI81Jc8Qez39e6s5pATsQ=="></script>
+<script src="/assets/webpack/pages.projects.blob.show.312db5b5.chunk.js" defer="defer" nonce="zwI81Jc8Qez39e6s5pATsQ=="></script>
 
 <meta content="object" property="og:type">
 <meta content="GitLab" property="og:site_name">
-<meta content="BC250_3.00_CHIPSETMENU.ROM · main · Segfault / BC-250 BIOS · GitLab" property="og:title">
+<meta content="BC250_3.00.ROM · main · Segfault / BC-250 BIOS · GitLab" property="og:title">
 <meta content="GitLab.com" property="og:description">
 <meta content="https://gitlab.com/assets/twitter_card-570ddb06edf56a2312253c5872489847a0f385112ddbcd71ccfa1570febab5d2.jpg" property="og:image">
 <meta content="64" property="og:image:width">
 <meta content="64" property="og:image:height">
-<meta content="https://gitlab.com/TuxThePenguin0/bc250-bios/-/blob/main/BC250_3.00_CHIPSETMENU.ROM" property="og:url">
+<meta content="https://gitlab.com/TuxThePenguin0/bc250-bios/-/blob/main/BC250_3.00.ROM" property="og:url">
 <meta content="summary" property="twitter:card">
-<meta content="BC250_3.00_CHIPSETMENU.ROM · main · Segfault / BC-250 BIOS · GitLab" property="twitter:title">
+<meta content="BC250_3.00.ROM · main · Segfault / BC-250 BIOS · GitLab" property="twitter:title">
 <meta content="GitLab.com" property="twitter:description">
 <meta content="https://gitlab.com/assets/twitter_card-570ddb06edf56a2312253c5872489847a0f385112ddbcd71ccfa1570febab5d2.jpg" property="twitter:image">
 
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="bI8ttNhV7d0t3X2wh37ECj8fr_aORlwGy1d7pFzQnYK5zKjvE2WmXttJBqA_N7uwOZhMDOJn6Bp1IcvhjlIgZw" />
-<meta name="csp-nonce" content="pJJ7tTn26G8TOKtQcuxwmA==" />
+<meta name="csrf-token" content="_bkWLKIKiIj84eTWIhyrbVfQebe6UYkV9rkEKZXZtdYo-pN3aTrDCwp1n8aaVdTXUVeaTdZwPQlIz7RsR1sIMw" />
+<meta name="csp-nonce" content="zwI81Jc8Qez39e6s5pATsQ==" />
 <meta name="action-cable-url" content="/-/cable" />
 <link href="/-/manifest.json" rel="manifest">
 <link rel="icon" type="image/png" href="/assets/favicon-72a2cad5025aa931d6ea56c3201d1f18e68a8cd39788c7c80d5b2b82aa5143ef.png" id="favicon" data-original-href="/assets/favicon-72a2cad5025aa931d6ea56c3201d1f18e68a8cd39788c7c80d5b2b82aa5143ef.png" />
@@ -175,10 +175,10 @@ gl.onlySendDuoEvents = false;
 <meta content="#232128" media="(prefers-color-scheme: dark)" name="theme-color">
 </head>
 
-<body class="tab-width-8 gl-browser-chrome gl-platform-windows " data-namespace-id="12011221" data-page="projects:blob:show" data-page-type-id="main/BC250_3.00_CHIPSETMENU.ROM" data-project="bc250-bios" data-project-full-path="TuxThePenguin0/bc250-bios" data-project-id="62782166" data-project-studio-enabled="true">
+<body class="tab-width-8 gl-browser-chrome gl-platform-windows " data-namespace-id="12011221" data-page="projects:blob:show" data-page-type-id="main/BC250_3.00.ROM" data-project="bc250-bios" data-project-full-path="TuxThePenguin0/bc250-bios" data-project-id="62782166" data-project-studio-enabled="true">
 <div id="js-tooltips-container"></div>
 
-<script nonce="pJJ7tTn26G8TOKtQcuxwmA==">
+<script nonce="zwI81Jc8Qez39e6s5pATsQ==">
 //<![CDATA[
 gl = window.gl || {};
 gl.client = {"isChrome":true,"isWindows":true};
@@ -190,7 +190,7 @@ gl.client = {"isChrome":true,"isWindows":true};
 
 <header class="super-topbar js-super-topbar"></header>
 <div class="layout-page js-page-layout page-with-super-sidebar">
-<script nonce="pJJ7tTn26G8TOKtQcuxwmA==">
+<script nonce="zwI81Jc8Qez39e6s5pATsQ==">
 //<![CDATA[
 const outer = document.createElement('div');
 outer.style.visibility = 'hidden';
@@ -219,12 +219,12 @@ document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidt
 <div class="top-bar-container gl-flex gl-items-center gl-gap-2">
 <div class="gl-grow gl-basis-0 gl-flex gl-items-center gl-justify-start gl-gap-3">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Segfault","item":"https://gitlab.com/TuxThePenguin0"},{"@type":"ListItem","position":2,"name":"BC-250 BIOS","item":"https://gitlab.com/TuxThePenguin0/bc250-bios"},{"@type":"ListItem","position":3,"name":"Repository","item":"https://gitlab.com/TuxThePenguin0/bc250-bios/-/blob/main/BC250_3.00_CHIPSETMENU.ROM"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Segfault","item":"https://gitlab.com/TuxThePenguin0"},{"@type":"ListItem","position":2,"name":"BC-250 BIOS","item":"https://gitlab.com/TuxThePenguin0/bc250-bios"},{"@type":"ListItem","position":3,"name":"Repository","item":"https://gitlab.com/TuxThePenguin0/bc250-bios/-/blob/main/BC250_3.00.ROM"}]}
 
 
 </script>
 <div data-testid="breadcrumb-links" id="js-vue-page-breadcrumbs-wrapper">
-<div data-breadcrumbs-json="[{&quot;text&quot;:&quot;Segfault&quot;,&quot;href&quot;:&quot;/TuxThePenguin0&quot;,&quot;avatarPath&quot;:null},{&quot;text&quot;:&quot;BC-250 BIOS&quot;,&quot;href&quot;:&quot;/TuxThePenguin0/bc250-bios&quot;,&quot;avatarPath&quot;:null},{&quot;text&quot;:&quot;Repository&quot;,&quot;href&quot;:&quot;/TuxThePenguin0/bc250-bios/-/blob/main/BC250_3.00_CHIPSETMENU.ROM&quot;,&quot;avatarPath&quot;:null}]" id="js-vue-page-breadcrumbs"></div>
+<div data-breadcrumbs-json="[{&quot;text&quot;:&quot;Segfault&quot;,&quot;href&quot;:&quot;/TuxThePenguin0&quot;,&quot;avatarPath&quot;:null},{&quot;text&quot;:&quot;BC-250 BIOS&quot;,&quot;href&quot;:&quot;/TuxThePenguin0/bc250-bios&quot;,&quot;avatarPath&quot;:null},{&quot;text&quot;:&quot;Repository&quot;,&quot;href&quot;:&quot;/TuxThePenguin0/bc250-bios/-/blob/main/BC250_3.00.ROM&quot;,&quot;avatarPath&quot;:null}]" id="js-vue-page-breadcrumbs"></div>
 <div id="js-injected-page-breadcrumbs"></div>
 <div id="js-page-breadcrumbs-extra"></div>
 </div>
@@ -287,7 +287,7 @@ document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidt
 <div class="js-signature-container" data-signatures-path="/TuxThePenguin0/bc250-bios/-/commits/6d20835942f0c51ebf155ae2eb3831a11b3182fd/signatures?limit=1"></div>
 
 <div class="tree-holder gl-pt-5" id="tree-holder">
-<div data-blob-path="BC250_3.00_CHIPSETMENU.ROM" data-breadcrumbs-can-collaborate="false" data-breadcrumbs-can-edit-tree="false" data-breadcrumbs-can-push-code="false" data-breadcrumbs-can-push-to-branch="false" data-breadcrumbs-new-blob-path="/TuxThePenguin0/bc250-bios/-/new/main" data-breadcrumbs-new-branch-path="/TuxThePenguin0/bc250-bios/-/branches/new" data-breadcrumbs-new-dir-path="/TuxThePenguin0/bc250-bios/-/create_dir/main" data-breadcrumbs-new-tag-path="/TuxThePenguin0/bc250-bios/-/tags/new" data-breadcrumbs-upload-path="/TuxThePenguin0/bc250-bios/-/create/main" data-download-links="[{&quot;text&quot;:&quot;zip&quot;,&quot;path&quot;:&quot;/TuxThePenguin0/bc250-bios/-/archive/main/bc250-bios-main.zip&quot;},{&quot;text&quot;:&quot;tar.gz&quot;,&quot;path&quot;:&quot;/TuxThePenguin0/bc250-bios/-/archive/main/bc250-bios-main.tar.gz&quot;},{&quot;text&quot;:&quot;tar.bz2&quot;,&quot;path&quot;:&quot;/TuxThePenguin0/bc250-bios/-/archive/main/bc250-bios-main.tar.bz2&quot;},{&quot;text&quot;:&quot;tar&quot;,&quot;path&quot;:&quot;/TuxThePenguin0/bc250-bios/-/archive/main/bc250-bios-main.tar&quot;}]" data-escaped-ref="main" data-history-link="/TuxThePenguin0/bc250-bios/-/commits/main" data-http-url="https://gitlab.com/TuxThePenguin0/bc250-bios.git" data-is-binary data-new-workspace-path="/-/remote_development/workspaces/new" data-organization-id="1" data-project-id="62782166" data-project-path="TuxThePenguin0/bc250-bios" data-project-root-path="/TuxThePenguin0/bc250-bios" data-project-short-path="bc250-bios" data-ref="main" data-ref-type="" data-root-ref="main" data-ssh-url="git@gitlab.com:TuxThePenguin0/bc250-bios.git" data-xcode-url="" id="js-repository-blob-header-app"></div>
+<div data-blob-path="BC250_3.00.ROM" data-breadcrumbs-can-collaborate="false" data-breadcrumbs-can-edit-tree="false" data-breadcrumbs-can-push-code="false" data-breadcrumbs-can-push-to-branch="false" data-breadcrumbs-new-blob-path="/TuxThePenguin0/bc250-bios/-/new/main" data-breadcrumbs-new-branch-path="/TuxThePenguin0/bc250-bios/-/branches/new" data-breadcrumbs-new-dir-path="/TuxThePenguin0/bc250-bios/-/create_dir/main" data-breadcrumbs-new-tag-path="/TuxThePenguin0/bc250-bios/-/tags/new" data-breadcrumbs-upload-path="/TuxThePenguin0/bc250-bios/-/create/main" data-download-links="[{&quot;text&quot;:&quot;zip&quot;,&quot;path&quot;:&quot;/TuxThePenguin0/bc250-bios/-/archive/main/bc250-bios-main.zip&quot;},{&quot;text&quot;:&quot;tar.gz&quot;,&quot;path&quot;:&quot;/TuxThePenguin0/bc250-bios/-/archive/main/bc250-bios-main.tar.gz&quot;},{&quot;text&quot;:&quot;tar.bz2&quot;,&quot;path&quot;:&quot;/TuxThePenguin0/bc250-bios/-/archive/main/bc250-bios-main.tar.bz2&quot;},{&quot;text&quot;:&quot;tar&quot;,&quot;path&quot;:&quot;/TuxThePenguin0/bc250-bios/-/archive/main/bc250-bios-main.tar&quot;}]" data-escaped-ref="main" data-history-link="/TuxThePenguin0/bc250-bios/-/commits/main" data-http-url="https://gitlab.com/TuxThePenguin0/bc250-bios.git" data-is-binary data-new-workspace-path="/-/remote_development/workspaces/new" data-organization-id="1" data-project-id="62782166" data-project-path="TuxThePenguin0/bc250-bios" data-project-root-path="/TuxThePenguin0/bc250-bios" data-project-short-path="bc250-bios" data-ref="main" data-ref-type="" data-root-ref="main" data-ssh-url="git@gitlab.com:TuxThePenguin0/bc250-bios.git" data-xcode-url="" id="js-repository-blob-header-app"></div>
 <div class="info-well">
 <div data-history-link="/TuxThePenguin0/bc250-bios/-/commits/main" id="js-last-commit"></div>
 <div class="gl-hidden @sm/panel:gl-block">
@@ -295,17 +295,17 @@ document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidt
 </div>
 </div>
 <div class="blob-content-holder js-per-page" data-blame-per-page="1000" id="blob-content-holder">
-<div data-blob-path="BC250_3.00_CHIPSETMENU.ROM" data-can-download-code="true" data-escaped-ref="main" data-explain-code-available="false" data-full-name="Segfault / BC-250 BIOS" data-has-revs-file="false" data-new-workspace-path="/-/remote_development/workspaces/new" data-organization-id="1" data-original-branch="main" data-project-path="TuxThePenguin0/bc250-bios" data-ref-type="" data-resource-id="gid://gitlab/Project/62782166" data-user-id="" id="js-view-blob-app">
+<div data-blob-path="BC250_3.00.ROM" data-can-download-code="true" data-escaped-ref="main" data-explain-code-available="false" data-full-name="Segfault / BC-250 BIOS" data-has-revs-file="false" data-new-workspace-path="/-/remote_development/workspaces/new" data-organization-id="1" data-original-branch="main" data-project-path="TuxThePenguin0/bc250-bios" data-ref-type="" data-resource-id="gid://gitlab/Project/62782166" data-user-id="" id="js-view-blob-app">
 <div class="gl-spinner-container" role="status"><span aria-hidden class="gl-spinner gl-spinner-md gl-spinner-dark !gl-align-text-bottom"></span><span class="gl-sr-only !gl-absolute">Loading</span>
 </div>
 </div>
 </div>
 
 </div>
-<script nonce="pJJ7tTn26G8TOKtQcuxwmA==">
+<script nonce="zwI81Jc8Qez39e6s5pATsQ==">
 //<![CDATA[
   window.gl = window.gl || {};
-  window.gl.webIDEPath = '/-/ide/project/TuxThePenguin0/bc250-bios/edit/main/-/BC250_3.00_CHIPSETMENU.ROM'
+  window.gl.webIDEPath = '/-/ide/project/TuxThePenguin0/bc250-bios/edit/main/-/BC250_3.00.ROM'
 
 
 //]]>
@@ -326,7 +326,7 @@ document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidt
 </div>
 
 
-<script nonce="pJJ7tTn26G8TOKtQcuxwmA==">
+<script nonce="zwI81Jc8Qez39e6s5pATsQ==">
 //<![CDATA[
 if ('loading' in HTMLImageElement.prototype) {
   document.querySelectorAll('img.lazy').forEach(img => {
@@ -347,7 +347,7 @@ if ('loading' in HTMLImageElement.prototype) {
 
 //]]>
 </script>
-<script nonce="pJJ7tTn26G8TOKtQcuxwmA==">
+<script nonce="zwI81Jc8Qez39e6s5pATsQ==">
 //<![CDATA[
 gl = window.gl || {};
 gl.experiments = {};
