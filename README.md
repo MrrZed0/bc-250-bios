@@ -27,6 +27,6 @@ AfuEfix64.efi BC250_3.00_CHIPSETMENU.ROM /p /b/ /n /k /x /ric:e
 
  
 
- 
+# Video: https://youtu.be/1FuWU0PRUVU
 
 #bc250 #bc-250 #asrockbc-250 #asrockbc250
